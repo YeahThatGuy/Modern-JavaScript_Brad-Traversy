@@ -18,10 +18,12 @@ By the end of this Learning Path, you will gain practical and clear hands-on exp
 
 <b>What you will learn:</b>
 
-Modular learning sections and 10 real-world projects with pure JavaScript
-Asynchronous programming with Ajax, Fetch API, Promises, and Async / Await
-Create an extensive social network application backend API with Express
-Integrate React with an Express backend in an elegant way
-Use Redux for state management
-Create data models with Mongoose ODM
-Deploy applications to Heroku with a post-build script
+<ul>
+  <li>Modular learning sections and 10 real-world projects with pure JavaScript</li>
+  <li>Asynchronous programming with Ajax, Fetch API, Promises, and Async / Await</li>
+  <li>Create an extensive social network application backend API with Express</li>
+  <li>Integrate React with an Express backend in an elegant way</li>
+  <li>Use Redux for state management</li>
+  <li>Create data models with Mongoose ODM</li>
+  <li>Deploy applications to Heroku with a post-build script</li>
+</ul>
