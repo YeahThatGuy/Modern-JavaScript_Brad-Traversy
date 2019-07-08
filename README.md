@@ -27,3 +27,5 @@ By the end of this Learning Path, you will gain practical and clear hands-on exp
   <li>Create data models with Mongoose ODM</li>
   <li>Deploy applications to Heroku with a post-build script</li>
 </ul>
+
+<a href="https://learning.oreilly.com/learning-paths/learning-path-javascript/9781789807660">Courtesy of O'Reilly</a>, all rights reserved
