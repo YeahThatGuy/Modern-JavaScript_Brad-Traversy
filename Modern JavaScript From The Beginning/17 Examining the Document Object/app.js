@@ -28,16 +28,16 @@ val = document.links[2].classList[0];
 val = document.images;
 
 val = document.scripts;
-val = document.scripts[2].getAttribute("src");
+val = document.scripts[0].getAttribute("integrity");
 
-// forEach works only on Arrays; the collection below will output an error
+// forEach works only on Arrays; the collection forEach loop below will output an error
 let scripts = document.scripts;
 
 // scripts.forEach(function(script) {
 //     console.log(script);
 // });
 
-// Array to Collection conversion
+// Collection to Array conversion
 let scriptsArr = Array.from(scripts);
 
 scriptsArr.forEach(function(script) {
