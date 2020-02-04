@@ -6,7 +6,7 @@ const listItem = document.querySelector("li.collection-item:first-child");
 val = listItem;
 val = list;
 
-// Get child nodes (returns NodeList)
+// // Get child nodes (returns NodeList)
 val = list.childNodes;
 val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
@@ -19,7 +19,7 @@ val = list.childNodes[0].nodeType;
 // 9 - Document itself
 // 10 - Doctype
 
-// Get children element nodes (returns HTML collection)
+// // Get children element nodes (returns HTML collection)
 val = list.children;
 val = list.children[0];
 list.children[0].textContent = "Changed node";

@@ -17,7 +17,7 @@
 // lis[0].style.color = "red";
 // lis[3].textContent = "Hello World";
 
-// // Convert HTML Collection into Array
+// Convert HTML Collection into Array
 // lis = Array.from(lis);
 
 // lis.reverse();
@@ -37,9 +37,9 @@ const items = document.querySelectorAll("ul.collection li.collection-item");
 //     console.log(item);
 // });
 
-items.forEach(function(item, index) {
-    item.textContent = `${index} Hello`;
-});
+// items.forEach(function(item, index) {
+//     item.textContent = `${index} Hello`;
+// });
 
 const liOdd = document.querySelectorAll("li:nth-child(odd)");
 const liEven = document.querySelectorAll("li:nth-child(even)");

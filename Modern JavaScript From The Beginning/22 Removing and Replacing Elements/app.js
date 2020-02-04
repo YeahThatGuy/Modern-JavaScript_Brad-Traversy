@@ -36,7 +36,7 @@ let val;
 // Classes
 val = link.className;
 val = link.classList;
-val = link.classList[0];
+// val = link.classList[0];
 link.classList.add("test");
 link.classList.remove("test");
 val = link;
