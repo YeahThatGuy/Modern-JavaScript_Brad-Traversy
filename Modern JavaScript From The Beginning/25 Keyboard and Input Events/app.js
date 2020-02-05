@@ -21,22 +21,22 @@ taskInput.value = "";
 // Cut
 // taskInput.addEventListener("cut", runEvent);
 // Paste
-// taskInput.addEventListener("paste", runEvent);
+taskInput.addEventListener("paste", runEvent);
 // Input
 // taskInput.addEventListener("input", runEvent);
 // Change
-select.addEventListener("change", runEvent);
+// select.addEventListener("change", runEvent);
 
 function runEvent(e) {
     console.log(`EVENT TYPE: ${e.type}`);
 
     console.log(e.target.value);
 
-    // heading.textContent = e.target.value;
+    heading.textContent = e.target.value;
 
-    // // Get input value
-    // console.log(taskInput.value);
-    // // Clear input
-    // taskInput.value = "";
-    // e.preventDefault();
+    // Get input value
+    console.log(taskInput.value);
+    // Clear input
+    taskInput.value = "";
+    e.preventDefault();
 }

@@ -1,13 +1,13 @@
-// document.querySelector(".clear-tasks").addEventListener("click", function(e){
-//     console.log("Hello World");
+document.querySelector(".clear-tasks").addEventListener("click", function(e){
+    console.log("Hello World");
 
-//     //e.preventDefault();
-// });
+    e.preventDefault();
+});
 
 document.querySelector(".clear-tasks").addEventListener("click", onClick);
 
 function onClick(e) {
-    //console.log("Clicked");
+    console.log("Clicked");
 
     let val;
 
@@ -19,7 +19,7 @@ function onClick(e) {
     val = e.target.className;
     val = e.target.classList;
 
-    // e.target.innerText = "Hello";
+    e.target.innerText = "Hello";
 
     // Event type
     val = e.type;
