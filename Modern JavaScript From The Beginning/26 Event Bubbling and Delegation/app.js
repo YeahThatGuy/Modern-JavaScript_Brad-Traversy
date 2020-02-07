@@ -18,11 +18,11 @@
 
 
 // EVENT DELEGATION; opposite of bubbling; from parent (super) to child (sub)
-// const delItem = document.querySelector(".delete-item");
+const delItem = document.querySelector(".delete-item");
 
-// delItem.addEventListener("click", deleteItem);
+delItem.addEventListener("click", deleteItem);
 
-document.body.addEventListener("click", deleteItem);
+// document.body.addEventListener("click", deleteItem);
 
 // function takes an event (so a click for example on any clickable object)
 function deleteItem(e) {

@@ -80,7 +80,7 @@ function addTask(e) {
         // Clear input
         taskInput.value = "";
     }
-
+    // Prevent form submission, which is the default behaviour of submit
     e.preventDefault();
 }
 
@@ -130,6 +130,8 @@ function removeTaskFromLocalStorage(taskItem) {
 // Clear all tasks
 function clearTasks(e) {
     // taskList.innerHTML = "";
+
+    // https://jsperf.com/innerhtml-vs-removechild
 
     // Faster; clear from DOM
     while (taskList.firstChild) {
