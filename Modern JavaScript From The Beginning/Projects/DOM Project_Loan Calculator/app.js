@@ -6,10 +6,10 @@ const interestRatePerYear = document.querySelector("#interest");
 const yearsToRepay = document.querySelector("#years");
 const form = document.querySelector("#loan-form");
 
-// Run all events
+// Call all events
 loadEventListeners();
 
-// Load all events
+// Run triggered events
 function loadEventListeners() {
     // Listen for submit button click
     form.addEventListener("submit", calculateLoan);
