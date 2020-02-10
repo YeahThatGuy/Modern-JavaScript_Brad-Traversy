@@ -21,9 +21,19 @@ function calculateLoan(e) {
     if (checkErrors() > 0) {
         stop();
     } else {
+        // Hide the results each time the button is pressed
+        document.getElementById("results").style.display = "none";
+        // Show the loading gif
+        document.getElementById("loading").style.display = "block";
+        // Stop the loading gif after 3 seconds
+        setTimeout(loadGIF, 3000);
+        // Run the functions that calculate the results
         calculateMonthlyPayment();
         calculateTotalPayment();
         calculateTotalInterest();
+        // Delay results by 3 seconds
+        setTimeout(showResults, 3000);
+        // document.getElementById("results").style.display = "block";
     }
 
     // Prevent submit and refresh (default behaviour of submit form event)
@@ -89,14 +99,16 @@ function checkErrors() {
         numberOfErrors++;
     }
 
+    // CLear the fields in "Results" (previous results) if there are errors
     if (numberOfErrors > 0) {
         monthlyPayment.value = "";
         totalPayment.value = "";
         totalInterest.value = "";
+        // Hide results divs when inputs are wrong
+        document.getElementById("results").style.display = "none";
+        // Clear the error message after 3 seconds
+        setTimeout(clearError, 3000);
     }
-
-    // Clear the error message after 3 seconds
-    setTimeout(clearError, 3000);
 
     return numberOfErrors;
 }
@@ -115,4 +127,14 @@ function clearError() {
 
     // Alternative III
     // document.querySelector(".alert-danger").remove();
+}
+
+// Run the loading animation
+function loadGIF() {
+    document.getElementById("loading").style.display = "none";
+}
+
+// Show the results
+function showResults() {
+    document.getElementById("results").style.display = "block";
 }
