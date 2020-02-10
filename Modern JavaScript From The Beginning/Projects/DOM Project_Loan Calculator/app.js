@@ -88,5 +88,31 @@ function checkErrors() {
         cardBody.prepend(errorElement);
         numberOfErrors++;
     }
+
+    if (numberOfErrors > 0) {
+        monthlyPayment.value = "";
+        totalPayment.value = "";
+        totalInterest.value = "";
+    }
+
+    // Clear the error message after 3 seconds
+    setTimeout(clearError, 3000);
+
     return numberOfErrors;
+}
+
+// Clear the error
+function clearError() {
+    const cardBody = document.querySelector(".card-body");
+    const errorElement = document.querySelector(".alert-danger");
+    cardBody.removeChild(errorElement);
+
+    // Alternative I
+    // errorElement.remove();
+
+    // Alternative II
+    // document.querySelector(".card-body").removeChild(document.querySelector(".alert-danger"));
+
+    // Alternative III
+    // document.querySelector(".alert-danger").remove();
 }
