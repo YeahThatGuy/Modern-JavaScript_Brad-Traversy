@@ -26,13 +26,13 @@ function calculateLoan(e) {
         // Show the loading gif
         document.getElementById("loading").style.display = "block";
         // Stop the loading gif after 3 seconds
-        setTimeout(loadGIF, 3000);
+        setTimeout(loadGIF, 2000);
         // Run the functions that calculate the results
         calculateMonthlyPayment();
         calculateTotalPayment();
         calculateTotalInterest();
         // Delay results by 3 seconds
-        setTimeout(showResults, 3000);
+        setTimeout(showResults, 2000);
         // document.getElementById("results").style.display = "block";
     }
 
