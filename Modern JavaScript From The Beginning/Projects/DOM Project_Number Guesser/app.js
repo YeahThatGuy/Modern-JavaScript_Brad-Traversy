@@ -28,7 +28,7 @@ function checkGuess(e) {
                 document.getElementById("guesser").disabled = true;
                 document.getElementById("submit-button").disabled = true;
             } else {
-                userMessage.textContent = "Wrong guess, try again.";
+                userMessage.textContent = `Wrong guess, ${3 - numberOfGuesses} remaining, try again.`;
                 userMessage.style.color = "red";
             }
         }
@@ -46,8 +46,6 @@ function checkGuess(e) {
                 document.getElementById("submit-button").disabled = true;
             }
         }
-
-
 
         numberOfGuesses++;
     } else {
