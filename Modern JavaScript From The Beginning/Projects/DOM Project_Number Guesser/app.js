@@ -5,7 +5,7 @@ const userMessage = document.createElement("p");
 const minNum = document.querySelector(".min-number");
 const maxNum = document.querySelector(".max-number");
 
-let min = 1;
+let min = 4;
 let max = 10;
 let numberOfGuesses = 1;
 // Default value before randomising with function
@@ -24,7 +24,7 @@ function loadEventListeners() {
 
 // Generate a number to guess
 function generateNumber() {
-    numberToGuess = Math.round(Math.random() * 10);
+    numberToGuess = Math.floor(Math.random() * (max - min + 1)) + min;
     console.log(numberToGuess);
     return numberToGuess;
 }
@@ -39,35 +39,38 @@ function decideToGenerate() {
 // Evaluate user guesses
 function checkGuess(e) {
 
-    decideToGenerate();
-1
     if (document.getElementById("submit-button").value === "Play Again") {
         document.getElementById("guesser").disabled = false;
         document.getElementById("submit-button").value = "Submit";
     } else {
-        // Check if the input value is between 0 and 10
+        // Generate the random number to guess
+        decideToGenerate();
+
+        // Check if the input value is between min and max
         if ((userGuess.value >= min) && (userGuess.value <= max)) {
             // Check user guess to number
             if (numberOfGuesses < 3) {
-                if (parseInt(userGuess.value) === decideToGenerate()) {
+                if (parseInt(userGuess.value) === numberToGuess) {
                     userMessage.textContent = "You guessed correctly.";
                     userMessage.style.color = "green";
+                    numberOfGuesses = 0;
+                    document.getElementById("submit-button").value = "Play Again";
                     document.getElementById("guesser").disabled = true;
-                    document.getElementById("submit-button").disabled = true;
                 } else {
-                    userMessage.textContent = `Wrong guess, ${3 - decideToGenerate()} remaining, try again.`;
+                    userMessage.textContent = `Wrong guess, ${3 - numberOfGuesses} remaining, try again.`;
                     userMessage.style.color = "red";
                 }
             }
 
             if (numberOfGuesses === 3) {
-                if (parseInt(userGuess.value) === decideToGenerate()) {
+                if (parseInt(userGuess.value) === numberToGuess) {
                     userMessage.textContent = "You guessed correctly.";
                     userMessage.style.color = "green";
+                    numberOfGuesses = 0;
+                    document.getElementById("submit-button").value = "Play Again";
                     document.getElementById("guesser").disabled = true;
-                    document.getElementById("submit-button").disabled = true;
                 } else {
-                    userMessage.textContent = `Wrong guess. The correct answer is ${decideToGenerate()}.`;
+                    userMessage.textContent = `Wrong guess. The correct answer is ${numberToGuess}.`;
                     userMessage.style.color = "red";
                     numberOfGuesses = 0;
                     document.getElementById("submit-button").value = "Play Again";
@@ -78,13 +81,14 @@ function checkGuess(e) {
 
             numberOfGuesses++;
         } else {
-            userMessage.textContent = "The number should be between 0 and 10!";
+            userMessage.textContent = `The number should be between ${min} and ${max}!`;
             userMessage.style.color = "red";
+            document.getElementById("submit-button").value = "Play Again";
+            document.getElementById("guesser").disabled = true;
         }
     }
 
     cardBody.appendChild(userMessage);
-
     // Prevent default event behaviour that submits and refreshes
     e.preventDefault();
 }
