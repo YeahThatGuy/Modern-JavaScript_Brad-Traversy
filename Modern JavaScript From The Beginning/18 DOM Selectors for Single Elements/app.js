@@ -8,7 +8,7 @@ console.log(document.getElementById("task-title").className);
 
 const taskTitle = document.getElementById("task-title");
 
-// Change styling
+// // Change styling
 taskTitle.style.background = "#333";
 taskTitle.style.color = "#fff";
 taskTitle.style.padding = "5px";
@@ -26,7 +26,7 @@ console.log(document.querySelector("#task-title"));
 console.log(document.querySelector(".card-title"));
 console.log(document.querySelector("h5"));
 
-// // querySelector() applies only to the 1st element
+// querySelector() applies only to the 1st element
 document.querySelector("li").style.color = "red";
 document.querySelector("ul li").style.color = "blue";
 

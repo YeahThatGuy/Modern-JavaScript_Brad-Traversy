@@ -26,10 +26,10 @@ val = parseInt("100.30");
 val = parseFloat("100.30");
 
 // Output
-// console.log(val);
-// console.log(typeof val);
+console.log(val);
+console.log(typeof val);
 // //console.log(val.length);
-// console.log(val.toFixed(2));
+console.log(val.toFixed(2));
 
 // Type coercion
 const val1 = String(5);

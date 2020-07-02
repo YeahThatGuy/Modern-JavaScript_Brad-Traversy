@@ -12,18 +12,18 @@ val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
 val = list.childNodes[0].nodeType;
 
-// 1 - Element
-// 2 - Attribute (deprecated)
-// 3 - Text node
-// 8 - Comment
-// 9 - Document itself
-// 10 - Doctype
+// // 1 - Element
+// // 2 - Attribute (deprecated)
+// // 3 - Text node
+// // 8 - Comment
+// // 9 - Document itself
+// // 10 - Doctype
 
-// // Get children element nodes (returns HTML collection)
+// Get children element nodes (returns HTML collection)
 val = list.children;
 val = list.children[0];
 list.children[0].textContent = "Changed node";
-// Children of children
+// // Children of children
 list.children[3].children[0].id = "test-link";
 val = list.children[3].children[0];
 

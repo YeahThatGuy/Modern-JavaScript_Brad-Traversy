@@ -39,6 +39,7 @@ const items = document.querySelectorAll("ul.collection li.collection-item");
 
 // items.forEach(function(item, index) {
 //     item.textContent = `${index} Hello`;
+//     console.log(item);
 // });
 
 const liOdd = document.querySelectorAll("li:nth-child(odd)");

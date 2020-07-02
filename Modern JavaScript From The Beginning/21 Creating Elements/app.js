@@ -24,7 +24,7 @@ link.className = "delete-item secondary-content";
 link.innerHTML = '<i class="fa fa-remove"></i>';
 
 // Append link as child to li
-document.querySelector("li.collection-item:nth-child(6)").appendChild(link);
+// document.querySelector("li.collection-item:nth-child(6)").appendChild(link);
 li.appendChild(link);
 
 console.log(li);

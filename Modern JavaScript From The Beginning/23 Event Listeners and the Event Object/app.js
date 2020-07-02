@@ -15,7 +15,7 @@ function onClick(e) {
 
     // Event target element
     val = e.target;
-    val = e.target.id;
+    // val = e.target.id;
     val = e.target.className;
     val = e.target.classList;
 

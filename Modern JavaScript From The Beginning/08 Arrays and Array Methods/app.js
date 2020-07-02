@@ -53,7 +53,14 @@ function under50(num) {
     return num < 50;
 }
 
+let numArr = [];
+numbers.forEach(element => {
+    numArr.unshift(element);
+    console.log(numArr);    
+});
+
 val = numbers.find(under50);
+
 
 console.log(numbers);
 console.log(val);
