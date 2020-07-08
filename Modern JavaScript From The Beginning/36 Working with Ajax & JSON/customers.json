@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "company": "123 Designs",
+        "phone": "323-019"
+    },
+    {
+        "id": 2,
+        "name": "Sarah Connor",
+        "company": "Alpha Productions",
+        "phone": "492-882"
+    },
+    {
+        "id": 3,
+        "name": "Ivan Smith",
+        "company": "Check Facts",
+        "phone": "521-112"
+    }
+]
